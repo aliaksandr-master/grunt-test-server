@@ -6,7 +6,7 @@
 [![Coverage Status](https://img.shields.io/coveralls/aliaksandr-pasynkau/grunt-test-server.svg?style=flat-square)](https://coveralls.io/r/aliaksandr-pasynkau/grunt-test-server?branch=master)
 
 # grunt-test-server
-Powerfull nodeJs library
+Powerful grunt task =)
 
 ## Getting started 
 
@@ -17,7 +17,33 @@ npm install -g grunt-test-server --save
 
 Finally, use the library:
 ```js
-gruntTestServer = require('grunt-test-server');
+
+{
+   testServerRun: {
+      someServer: {
+         options: {
+            port: 3000,
+            serve: function (app) {
+               // app - empty express application
+
+               app.get('/hello/world', function (req, res) {
+                  req.send({ "hello": "world" });
+               });
+            }
+         }
+      }
+   },
+   
+   testServerClose: {
+      someServer: {
+         options: {
+             port: 3000 // need for removing test server
+         }
+      }
+   },
+   
+   testServerCloseAll: {} // for removing all active test servers
+}
 
 // do something helpful
 ```
