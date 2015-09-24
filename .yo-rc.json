@@ -1,0 +1,23 @@
+{
+  "generator-node-lib": {
+    "version": "1.0.0",
+    "travis": true,
+    "coveralls": true,
+    "testEngine": "nodeunit",
+    "license": "MIT",
+    "indentType": "tab",
+    "indentSize": 4,
+    "app": {
+      "name": "grunt-test-server",
+      "varName": "gruntTestServer",
+      "coverageEnvName": "NODE_LIB_GRUNTTESTSERVER_COVERAGE"
+    },
+    "repository": {
+      "raw": "https://github.com/aliaksandr-pasynkau/grunt-test-server.git",
+      "url": "https://github.com/aliaksandr-pasynkau/grunt-test-server",
+      "host": "github.com",
+      "user": "aliaksandr-pasynkau",
+      "name": "grunt-test-server"
+    }
+  }
+}
